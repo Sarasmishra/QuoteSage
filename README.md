@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# QuoteSage – A Daily Quote Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+QuoteSage is a React-based web application that displays motivational quotes to users. It fetches quotes from the ZenQuotes API and allows users to:
 
-## Available Scripts
+- View a random motivational quote with the author’s name.
+- Refresh to see a new quote.
+- Like (favorite) quotes locally.
+- Customize the quote font size.
+- Toggle between light and dark themes.
 
-In the project directory, you can run:
+This project demonstrates React concepts like components, props, hooks (`useState`), and asynchronous API calls with Axios.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+- Fetches random quotes using Axios from [ZenQuotes API](https://zenquotes.io/api/random).
+- Displays quote text and author.
+- "New Quote" button to fetch a new random quote.
+- Like button toggles local like state.
+- Font size customization via dropdown.
+- Light/Dark theme toggle.
+- Error handling for failed API calls.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Technologies Used
+- React (functional components and hooks)
+- Axios (HTTP client)
+- CSS for styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Installation and Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Sarasmishra/QuoteSage.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage Instructions
+1. Click the New Quote button to fetch and display a new motivational quote.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Click the Like button to toggle your liking of the current quote.
 
-### `npm run eject`
+3. Use the Font Size dropdown to adjust the size of the quote text.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Toggle between Light and Dark modes using the theme toggle button.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
+- src/App.js — Main React component managing state, API calls, and layout.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- src/components/QuoteCard.js — Displays the quote and author.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- src/components/QuoteButton.js — Reusable button component.
 
-## Learn More
+- src/components/ThemeToggle.js — Switches between light and dark themes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- src/index.js — Entry point for React.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- src/styles.css — Basic styles for the app.
 
-### Code Splitting
+## Important Notes
+- The ZenQuotes API may have CORS restrictions. If you experience errors fetching quotes, consider using a CORS proxy or adjusting your browser settings.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- This app focuses on functionality; styling is basic and can be enhanced further.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The like state is local only and will reset on page reload.
